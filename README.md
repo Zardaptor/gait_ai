@@ -45,7 +45,6 @@ GaitAI addresses these challenges through an Edge AI architecture that performs 
 - Edge AI inference
 - REST API backend
 - Android mobile application
-- Streamlit monitoring dashboard
 - Offline-first architecture
 - Cloud synchronization (optional)
 
@@ -72,11 +71,11 @@ Phi-4 Mini Reasoning
         │
 FastAPI REST Server
         │
- ┌───────────────┐
- │               │
- ▼               ▼
+ ┌───────
+ │              
+ ▼            
 
-Flutter App   Streamlit Dashboard
+Flutter App 
 ```
 
 ---
@@ -148,7 +147,6 @@ Sensor data is streamed continuously through USB Serial to the Edge AI backend.
 |--------|------------|
 | Firmware | Arduino |
 | Backend | Python |
-| Dashboard | Streamlit |
 | API | FastAPI |
 | Mobile | Flutter |
 | Machine Learning | Scikit-Learn |
@@ -273,22 +271,8 @@ Returns hardware status
 
 ---
 
-# Streamlit Dashboard
 
-The desktop dashboard provides:
 
-- Live pressure heatmap
-- Sensor visualization
-- IMU monitoring
-- Step counter
-- Cadence estimation
-- Gait prediction
-- Risk indicator
-- Historical trends
-
-This dashboard is primarily intended for clinicians, researchers, and demonstration purposes.
-
----
 
 # Mobile Application
 
@@ -348,11 +332,10 @@ GaitAI/
 │   ├── Feature Extraction
 │   ├── Inference
 │
-├── dashboard/
-│   ├── Streamlit Dashboard
 │
 ├── mobile/
 │   ├── Flutter Application
+
 │
 ├── docs/
 │   ├── Architecture
@@ -395,11 +378,6 @@ Open the Arduino firmware inside the `hardware` folder and upload it to the Ardu
 python backend/app.py
 ```
 
-## Launch Streamlit Dashboard
-
-```bash
-streamlit run dashboard/streamlit_app.py
-```
 
 ## Launch Flutter Application
 
